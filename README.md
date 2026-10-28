@@ -14,29 +14,7 @@ WardrobeAI is a web-based wardrobe management and outfit recommendation platform
 
 ## Architecture diagram
 
-flowchart TD
-    A["GitHub Repository URL"] --> B["Repository Validation"]
-    B --> C["Clone Repository"]
-    C --> D["Filter Source Files"]
-    D --> E["AST Parsing and Semantic Chunking"]
-    E --> F["Generate Embeddings"]
-    F --> G[("Supabase PostgreSQL + pgvector")]
-    
-    H["Client / Frontend"] --> I["FastAPI REST Service"]
-    I --> J{"Request Type"}
-    J -->|POST /index| B
-    J -->|POST /search| K["Embed Search Query"]
-    K --> L["Vector Similarity Search"]
-    G --> L
-    L --> M["Retrieve Relevant Code Chunks"]
-    M --> N["Return Results with File Paths and Line Numbers"]
-    N --> H
-    
-    style A fill:#EDE9FE,stroke:#7C3AED,color:#111827
-    style I fill:#DBEAFE,stroke:#2563EB,color:#111827
-    style G fill:#D1FAE5,stroke:#059669,color:#111827
-    style E fill:#FEF3C7,stroke:#D97706,color:#111827
-    style N fill:#FCE7F3,stroke:#DB2777,color:#111827
+<img width="1314" height="1926" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/6285c25e-e32c-4a4d-94e8-af992d7e6711" />
 
 
 ## 🛠️ Tech Stack
